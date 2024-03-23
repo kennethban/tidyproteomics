@@ -85,8 +85,6 @@ plot_heatmap <- function(
                              main = glue::glue("Heatmap: {data$analyte} {data$quantitative_source} \n")
   )
 
-  if(!'null device' %in% names(grDevices::dev.cur())) { invisible(grDevices::dev.off()) }
-
   return(plot_save(plot,
                    data,
                    glue::glue("{data$analyte}_{data$quantitative_source}_heatmap"),
